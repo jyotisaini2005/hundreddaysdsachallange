@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 //Given an m x n matrix, return true if the matrix is Toeplitz. Otherwise, return false.
 
@@ -16,4 +17,24 @@ class Solution {
 
         return true;
     }
+=======
+
+//Given an m x n matrix, return true if the matrix is Toeplitz. Otherwise, return false.
+
+//A matrix is Toeplitz if every diagonal from top-left to bottom-right has the same elements
+class Solution {
+    public boolean isToeplitzMatrix(int[][] matrix) {
+
+        for (int i = 1; i < matrix.length; i++) {
+            for (int j = 1; j < matrix[0].length; j++) {
+
+                if (matrix[i][j] != matrix[i - 1][j - 1]) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
+>>>>>>> 31128666d01b5721a03fe43e899a23a37718a68e
 }
